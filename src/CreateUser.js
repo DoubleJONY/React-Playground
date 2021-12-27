@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-function CreateUser({ username, email, onChange, onCreate }) {
-    return (
+function CreateUser({username, email, onChange, onCreate, onUpdate}){
+    return(
         <div>
             <input
                 name="username"
@@ -16,8 +16,9 @@ function CreateUser({ username, email, onChange, onCreate }) {
                 value={email}
             />
             <button onClick={onCreate}>등록</button>
+            <button onClick={onUpdate}>업데이트</button>
         </div>
-    );
+    )
 }
 
 export default CreateUser;
